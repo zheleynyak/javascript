@@ -8,7 +8,7 @@ let x = 0;
 console.log(arrNumb);
 
 for (let i = 0; i < arrNumb.length; i++) {
-    if (x >= arrNumb[i]) {
+    if (x > arrNumb[i]) {
         console.log(arrNumb[i]);
     }
 }
