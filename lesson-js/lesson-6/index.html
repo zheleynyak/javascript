@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function x(y) {
+    console.log(y);
+  }
+  function a() {
+    return 100;
+  }
+
+  // x(a());
+
+  // x(function a() {
+  //   return 100;
+  // }());
+
+  x(function () {
+    return 100;
+  }());
+</script>
+</body>
+</html>
