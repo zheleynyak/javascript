@@ -6,22 +6,15 @@
 </head>
 <body>
 <script>
-  function x(y) {
-    console.log(y);
-  }
-  function a() {
-    return 100;
-  }
 
-  // x(a());
+    for (let item of array) {
+        for (let key in item) {
+            if (item[key] > 30) {
+                filterArray.push(item[key]);
+            }
+            }
+    }
 
-  // x(function a() {
-  //   return 100;
-  // }());
-
-  x(function () {
-    return 100;
-  }());
 </script>
 </body>
 </html>
