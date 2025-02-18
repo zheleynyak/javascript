@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function bubbleSort(array) {
+		for (let i = 0; i < array.length; i++) {
+			for (let x = 0; x < array.length; x++) {
+				if (array[x] > array[x + 1]) {
+					let temporarNumber = array[x];
+					array[x] = array[x + 1];
+					array[x + 1] = temporarNumber;
+				}
+			}
+		}
+		return array;
+	}
+
+	let arr = [9, 0, 3, 6, 2, 5, 1];
+
+	bubbleSort(arr);
+	console.log(arr);
+
+</script>
+</body>
+</html>
