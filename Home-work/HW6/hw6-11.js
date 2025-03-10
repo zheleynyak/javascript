@@ -35,17 +35,24 @@ let coursesArray = [{
 	modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
 }];
 
-function serch(array, text) {
-	for (let objectArray of array) {
-		for (let key of objectArray.modules) {
-			if (key === text) {
-				console.log(objectArray);
-			}
-		}
-	}
-	return array;
-}
-
+// function serch(array, text) {
+// 	for (let objectArray of array) {
+// 		for (let key of objectArray.modules) {
+// 			if (key === text) {
+// 				console.log(objectArray);
+// 			}
+// 		}
+// 	}
+// }
+//
 // serch(coursesArray, 'sass');
 // serch(coursesArray, 'docker');
-serch(coursesArray,'python');
+// serch(coursesArray,'python');
+
+console.log(coursesArray.filter(course => {
+	return course.modules.includes('docker');
+}));
+
+console.log(coursesArray.filter(course => {
+	return course.modules.includes('sass');
+}));
