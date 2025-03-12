@@ -7,3 +7,38 @@
 //     -- changeYear (newValue) - змінює рік випуску на значення newValue
 //     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
+
+class Car {
+	constructor(mode, producer, year, maxSpeed, engineVolume) {
+		this.mode = mode
+		this.producer = producer
+		this.year = year
+		this.maxSpeed = maxSpeed
+		this.engineVolume = engineVolume
+	}
+	drive() {
+		console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+	};
+	info() {
+		for (let key in this) {
+			console.log(key + ': ' + this[key]);
+		}
+	}
+	increaseMaxSpeed(newSpeed) {
+		this.maxSpeed = this.maxSpeed + newSpeed;
+	}
+	changeYear(newYear) {
+		this.year = newYear;
+	}
+	addDriver(objectDriver) {
+		this.driver = objectDriver;
+	}
+}
+
+let car1 = new Car('a5', 'audi', '2024', 250, 3000);
+car1.drive();
+car1.info();
+car1.increaseMaxSpeed(100);
+car1.changeYear(20);
+car1.addDriver({name:12312});
+console.log(car1);
